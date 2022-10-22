@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
 import Weather from "./Weather";
 function App() {
   return (
@@ -10,16 +10,17 @@ function App() {
        <footer>
         This project was coded by {""}
  <a 
- href=""
+ href="https://app.netlify.com/sites/spontaneous-horse-b79cf3/deploys/"
  target="_blank"
  rel="nooperner noreferrer">
-       Tiffany Walker</a> {""}
-       and is {""}<a
-       href="https://"
+       Tiffany Walker
+       </a> {""}
+       and is {""}
+       <a
+       href="https://github.com/4theloveoflife/weather-react1.0"
        target="_blank"
        rel="noopener noreferrer">
  open-sourced</a>
- </a>
  </footer>
  </div>
  </div>
@@ -27,3 +28,4 @@ function App() {
 }
 
 export default App;
+
