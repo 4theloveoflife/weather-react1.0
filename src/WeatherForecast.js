@@ -4,19 +4,18 @@ import WeatherForecastDay from "./WeatherForecastDay";
 
 export default function WeatherForecast(props){
     let [ loaded, setLoaded]=useState(false);
-    let [forecast, setForecast]=useSate (null);
+    let [forecast, setForecast]=useState (null);
 
-    useEffect(() => {
+    useEffect( ( ) => {
         setLoaded(false);
-    },
-    [props.coordinates]);
+    },  [props.coordinates]);
 
 function handleResponse(response){
     setForecast (response.data.daily);
     setLoaded(true);
 }
 
-function load()
+function load(){
     let apiKey="b1ad2579aaffa4376d245595812d15f0";
     let longitude=props.coordinates.lon;
     let latitude=props.coordinates.lat;
@@ -28,8 +27,7 @@ if (loaded){
     return(
         <div className="Weather Forecast">
             <div className="row">
-                {forecast.map(function(dailyForecast, index)
-                {
+                {forecast.map(function(dailyForecast, index) {
                     if (index < 5) {
                         return(
                             <div className="col" key={index}>
@@ -46,4 +44,5 @@ if (loaded){
 }else {
     load();
     return null;
+}
 }
